@@ -1,0 +1,25 @@
+[project]
+name = "newsletter"
+version = "0.1.0"
+description = "newsletter using crewAI"
+authors = [{ name = "Your name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.6.0",
+    "exa_py"
+]
+
+[project.scripts]
+newsletter = "newsletter.main:run"
+run_crew = "newsletter.main:run"
+train = "newsletter.main:train"
+replay = "newsletter.main:replay"
+test = "newsletter.main:test"
+run_with_trigger = "newsletter.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
